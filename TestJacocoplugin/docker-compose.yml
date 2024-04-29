@@ -6,3 +6,11 @@ services:
       - 9000:9000
     environment:
       - SONAR_FORCEAUTHENTICATION=false
+  jenkins:
+    image: jenkins/jenkins:2.319.1-jdk11
+    ports:
+      - 8080:8080
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
